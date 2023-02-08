@@ -21,6 +21,7 @@ div.top-header{
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
+    justify-content: center;
 }
 
 header div.top-header p{
@@ -61,6 +62,14 @@ header ul li a{
     color: #000;
 }
 
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 50%;
+}
+
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
@@ -73,7 +82,7 @@ header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
-    width: 10%;
+    width: 20px;
 }
 
 div.burger-menu{
@@ -187,12 +196,31 @@ main section article:hover .description{
     display: block;
 }
 
-.login input[type='submit']:hover,
-.register input[type='submit']:hover{
+.login-btn:hover,
+.register-btn:hover{
     background-color: #0022AA;
 }
 
-@media (min-width: 361px){
+.navbar{
+    display: none;
+    padding-bottom: 5px;
+}
+footer{
+    background-color: #fff;
+}
+.pie{
+    
+    padding: 10px;
+    text-align: center;
+}
+.partes-footer{
+    margin: 15px;
+}
+.partes-footer i {
+    color: #1259c3;
+}
+
+@media (min-width: 480px){
     main section div.products{
         display: flex;
         flex-direction: row;
@@ -200,19 +228,57 @@ main section article:hover .description{
         justify-content: space-between;
         align-items: flex-start;
     }
+    main section article .description:hover{
+        display: block;
+    }
+
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
     
     main section div.products article{
         width: 45%;
+    }
+    .navbar {
+        display: block;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul{
+        display: flex;
+    }
+
+    nav ul li{
+        margin: 4px;
     }
 
     .price,
     .discount{
         width: 50%;
     }
+    div.burger-menu{
+        display: none;
+    }
+    footer{
+        text-align: center;
+        padding-bottom: 10px;
+    }
 }
 
 @media (min-width: 769px){
     main section div.products article{
         width: 22%;
+    }
+
+    .pie{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .partes-footer i:hover{
+        color: #EAC926;
     }
 }
